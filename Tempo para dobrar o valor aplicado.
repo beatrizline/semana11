@@ -1,0 +1,36 @@
+# Escreva um programa que pergunte o depósito inicial e a
+# taxa de juros ao ano de uma poupança.
+# Mostre em quantos anos o valor acumulado será o dobro do valor inicial.
+
+def calculo():
+    x = float(input())
+    y = float(input())
+    y /=100
+    v_a = x
+    anos = 0
+
+    while v_a < 2 * x:
+        v_a *= (1+y)
+        anos += 1
+    print(anos)
+
+calculo()
+
+
+# depoisito inicial = x
+# taxa de juros = y
+# Na questao infoma "quantos anos o valor acumulado sera o dobro do valor
+# inicial". Nesse caso, eu sei que valor acumulado = x * 2.
+# em quantos anos? eu nao sei, entao inicialmente iremos atribuir o numero
+# zero ao ano. anos = 0
+
+# para usarmos o while com repeticao com teste no inicio:
+# enquanto valor acumulado(1000) for menor que 2 * x (2000)
+# 1000 * = 1 + 0,05
+# anos += 1
+# ira executar isso ate a condiçao do while for satisfeita, depois da parada
+# no 14, ira ser somado por 1 para a resposta ser correta e exata.
+
+
+
+
