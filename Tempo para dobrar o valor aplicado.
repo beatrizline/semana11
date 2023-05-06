@@ -12,9 +12,13 @@ def calculo():
     while v_a < 2 * x:
         v_a *= (1+y)
         anos += 1
-    print(anos)
+    return anos
 
-calculo()
+def main():
+    print (calculo())
+
+if __name__ == '__main__':
+    main()
 
 
 # depoisito inicial = x
