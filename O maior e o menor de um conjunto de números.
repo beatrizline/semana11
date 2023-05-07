@@ -1,0 +1,31 @@
+# Escreva um programa que leia uma quantidade indefinida de números inteiros positivos terminada pelo número 0 (zero). 
+# Ao final, o programa deve mostrar o maior e o menor de todos os números lidos (excluindo o zero).
+
+def calculando():
+    numero = int(input())
+
+    if numero == 0:
+        return None
+
+    maior = menor = numero
+
+    while True:
+        x = int(input())
+
+        if x == 0:
+            break
+
+        if x > maior:
+            maior = x
+        if x < menor:
+            menor = x
+
+    print (f'{maior}\n{menor}')
+
+def main():
+    calculando()
+
+if __name__ == '__main__':
+    main()
+
+
