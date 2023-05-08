@@ -37,7 +37,7 @@ while True:
         score = score + 1
     else:
         print('Que peninha!')
-        print(f'Você adquiriu {score} ponto(s). Tente novamente!')
+    print(f'Você adquiriu {score} ponto(s). Tente novamente!')
 
     if portaEscolhida == 0:
         break
