@@ -1,0 +1,53 @@
+# O que acontece se o jogador tentar terminar o jogo 
+# digitando N ao invés de n? Você pode usar a função lower() 
+# (que transforma o texto para letras minúsculas) para 
+# consertar esse problema?
+
+from random import *
+
+jogando = True
+score = 0
+
+print('''
+Porta da Fortuna!
+=========
+
+Existe um super premio atras de uma destas 3 portas!
+Adivinha qual e a porta certa para ganhar o premio!
+
+ _______     _______     _______
+|       |   |       |   |       |
+|  [1]  |   |  [2]  |   |  [3]  |
+|      o|   |      o|   |      o|
+|       |   |       |   |       |
+ _______     _______     _______
+ 
+''')
+
+while jogando == True:
+    print("\nEscolha uma porta (1,2 ou 3):")
+    portaEscolhida = input()
+    portaEscolhida = int(portaEscolhida)
+    portaCerta = randint(1,3) #Gera um numero inteiro aleatorio entre um intervalo
+
+    print("A porta escolhida foi a", portaEscolhida)
+    print("A porta certa é a", portaCerta)
+
+    if portaEscolhida == portaCerta:
+        print('Parabéns!')
+        score = score + 1
+    else:
+        print('Que peninha!')
+
+    print(f'Sua pontuação é {score}')
+
+    print('\nVocê quer jogar de novo? (s/n)')
+    resposta = input()
+
+    if resposta == 'n'.lower():
+        jogando = False
+    elif resposta == 's'.lower():
+        continue
+
+    print('Obrigado por jogar.')
+    print('Sua pontuação final é de', score)
