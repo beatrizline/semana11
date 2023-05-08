@@ -1,0 +1,34 @@
+# Você consegue criar um jogo em que o objetivo é fazer 
+# exatamente 21 pontos? Esse programa deve gerar um 
+# número aleatório entre 1 e 10, que é adicionado à 
+# pontuação do jogador. O jogador pode, então, escolher ficar # com aquela pontuação ou adicionar um outro número 
+# aleatório a ela. O jogador ganha se conseguir fazer 
+# exatamente 21 pontos.
+# Lembre-se de adicionar comentários ao seu programa!! 
+
+from random import *
+
+jogando = True
+
+print('Vinte e um!\n===========')
+print('Tente fazer exatamente 21 pontos')
+
+while jogando == True:
+    x = input()
+    x = int(x)
+    variavel = randint(1, 10)
+    variavel += x
+
+    print("Seu próximo número é", x)
+    print("Sua pontuação agora é ", variavel)
+
+    if variavel == 21:
+        print('VOCÊ VENCEU!')
+
+    m = input('Gostaria de somar mais um número? (s/n) ?')
+    if m == 'n'.lower():
+        print('Obrigada por jogar!')
+        print(f'Sua pontuação final é {variavel}')
+
+    if m == 's'.lower():
+        continue
