@@ -44,7 +44,7 @@ while jogando == True:
     print('\nVocê quer jogar de novo? (s/n)')
     resposta = input()
 
-    if resposta == 'n'.lower():
+    if resposta == 'n'.lower() or resposta == 'nao':
         jogando = False
     elif resposta == 's'.lower():
         continue
