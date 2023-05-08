@@ -1,0 +1,38 @@
+# Faça um programa que leia a nota de um aluno, entre zero e dez. Mostre a mensagem “Nota inválida.”
+# caso o valor seja inválido e continue pedindo até que o usuário informe um valor válido. Após informar
+# uma nota válida, o aluno deve ver seu conceito, segundo a tabela:
+
+# A  >= 8,5
+# B >= 7.0
+# C >= 5.0
+# D >= 4.0
+# E >= 0
+
+def nota():
+    for i in range(0,11):
+        x = float(input())
+
+        if x >= 8.5 and x <= 10:
+            print('A')
+        elif x >= 7.0 and x < 10:
+            print('B')
+        elif x >= 5.0 and x < 10:
+            print('C')
+        elif x >= 4.0 and x < 10:
+            print('D')
+        elif x >= 0.0 and x < 10:
+            print('E')
+
+        if x < 0 or x > 10:
+            print('Nota inválida.')
+        else:
+            break
+
+def main():
+    nota()
+
+if __name__ == '__main__':
+    main()
+
+
+
