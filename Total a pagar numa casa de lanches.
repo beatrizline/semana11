@@ -1,0 +1,52 @@
+# O cardápio de uma casa de lanches, especializada em sanduíches, é dado abaixo.
+
+# CÓDIGO  PRODUTO         PREÇO (R$)
+# H       Hamburger       5.50
+# C       Cheeseburger    6.80
+# M       Misto Quente    4.50
+# A       Americano       7.00
+# Q       Queijo Prato    4.00
+# X       PARA TOTAL DA CONTA
+
+# Escreva um programa que leia o código e a quantidade de cada item comprado por um freguês, calcule e exiba o total a pagar. 
+# Obs: A leitura do código 'X' indica o fim dos itens.
+
+def cardapio():
+    resultado = 0
+
+    while True:
+        if resultado != "X":
+            print("CÓDIGO  PRODUTO         PREÇO (R$)")
+            print('H       Hamburger       5,50')
+            print('C       Cheeseburger    6,80')
+            print('M       Misto Quente    4,50')
+            print('A       Americano       7,00')
+            print('Q       Queijo Prato    4,00')
+            print('X       PARA TOTAL DA CONTA')
+        calculando = input().upper()[0]
+
+        if calculando == 'H':
+            resultado += 5.50
+        elif calculando == 'C':
+            resultado += 6.80
+        elif calculando == 'M':
+            resultado += 4.50
+        elif calculando == 'A':
+            resultado += 7.00
+        elif calculando == 'Q':
+            resultado += 4.00
+        elif calculando == 'X':
+            break
+        else:
+            print('Opção Inválida.')
+            continue
+
+    print(f'{resultado:.2f}')
+
+def main():
+    cardapio()
+
+if __name__ == '__main__':
+    main()
+
+
